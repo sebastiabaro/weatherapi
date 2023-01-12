@@ -8,11 +8,11 @@ A REST API to query weather using the openweathermap.org API, developed in Node.
 3. [Installing](#installing)
 4. [Running the app](#running-the-app)
 5. [Running the tests](#running-the-tests)
-6. [Usage](#Usage)
 6. [Built With](#built-with)
-7. [Contributing](#contributing)
-8. [Author](#author)
-9. [License](#License)
+7. [Usage](#Usage)
+8. [Contributing](#contributing)
+9. [Author](#author)
+10. [License](#License)
 
 ## Getting Started
 
@@ -55,6 +55,16 @@ npm start
 
 There are no tests for this project yet.
 
+## Built With
+
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [Axios](https://github.com/axios/axios)
+- [Cors](https://github.com/expressjs/cors)
+- [dotenv](https://github.com/motdotla/dotenv)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TSLint](https://palantir.github.io/tslint/)
+
 ## Usage
 
 The API has a single endpoint for querying the weather of a city. The endpoint is `/weather/:city` and it accepts the following query parameters:
@@ -68,16 +78,6 @@ Here are some examples of how to use the API:
 - Get the weather of New York in Fahrenheit: `GET /weather/New+York?units=imperial`
 - Get the weather of Tokyo in Japanese: `GET /weather/Tokyo?lang=ja`
 
-
-## Built With
-
-- [Node.js](https://nodejs.org/)
-- [Express](https://expressjs.com/)
-- [Axios](https://github.com/axios/axios)
-- [Cors](https://github.com/expressjs/cors)
-- [dotenv](https://github.com/motdotla/dotenv)
-- [TypeScript](https://www.typescriptlang.org/)
-- [TSLint](https://palantir.github.io/tslint/)
 
 ## Contributing
 
