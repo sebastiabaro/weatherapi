@@ -23,27 +23,31 @@ You will need Node.js and npm (or yarn) installed on your machine.
 ### Installing
 
 Clone the repository and install the dependencies:
-
+```
 git clone https://github.com/yourusername/WeatherAPI.git
 cd WeatherAPI
 npm install
+```
 
 You will also need to create a `.env` file in the root of the project with your API key for openweathermap.org. The file should look like this:
-
+```
 OPENWEATHER_API_KEY=your_api_key
+```
 
 ### Running the app
 
 You can run the app in development mode with the following command:
-
+```
 npm run dev
+```
 
 This will start the app and watch for changes in the source files.
 
 You can also build the app and run it in production mode:
-
+```
 npm run build
 npm start
+```
 
 ### Running the tests
 
