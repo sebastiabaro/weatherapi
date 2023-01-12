@@ -8,6 +8,7 @@ A REST API to query weather using the openweathermap.org API, developed in Node.
 3. [Installing](#installing)
 4. [Running the app](#running-the-app)
 5. [Running the tests](#running-the-tests)
+6. [Usage](#Usage)
 6. [Built With](#built-with)
 7. [Contributing](#contributing)
 8. [Author](#author)
@@ -53,6 +54,20 @@ npm start
 ### Running the tests
 
 There are no tests for this project yet.
+
+## Usage
+
+The API has a single endpoint for querying the weather of a city. The endpoint is `/weather/:city` and it accepts the following query parameters:
+
+- `units`: Specifies the units for the temperature. Can be either `metric` (Celsius) or `imperial` (Fahrenheit). Default is `metric`.
+- `lang`: Specifies the language of the weather description. Can be any ISO 639-1 language code. Default is `en`.
+
+Here are some examples of how to use the API:
+
+- Get the weather of London in Celsius: `GET /weather/London`
+- Get the weather of New York in Fahrenheit: `GET /weather/New+York?units=imperial`
+- Get the weather of Tokyo in Japanese: `GET /weather/Tokyo?lang=ja`
+
 
 ## Built With
 
