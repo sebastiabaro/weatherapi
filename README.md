@@ -2,6 +2,7 @@
 
 A REST API to query weather using the openweathermap.org API, developed in Node.js and TypeScript.
 
+##### Table of Contents 
 1. [Getting Started](#getting-started)
 2. [Prerequisites](#prerequisites)
 3. [Installing](#installing)
