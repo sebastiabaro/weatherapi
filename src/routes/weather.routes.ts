@@ -1,9 +1,9 @@
-import { Router } from 'express';
-import WeatherController from '../controllers/weather.controller';
+import { Router } from 'express'
+import WeatherController from '../controllers/weather.controller'
 
 /*
  * WeatherAPI - A REST API to query weather using the openweathermap.org API, developed in Node.js and TypeScript
- * Copyright (C) 2021 Sebastià Baró
+ * Copyright (C) 2023 Sebastià Baró
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,12 +17,40 @@ import WeatherController from '../controllers/weather.controller';
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
+ */
 
-const weatherController = new WeatherController();
+const weatherController = new WeatherController()
 
-const router = Router();
+const router = Router()
 
-router.get('/:city', weatherController.getWeather);
+// Get weather by city name
+router.get('/:city', weatherController.getWeather)
 
-export default router;
+// Get forecast for multiple cities
+router.get('/cities', weatherController.getForecastForMultipleCities)
+
+// Get forecast based on user's location
+router.get('/location', weatherController.getForecastByLocation)
+
+// Get additional weather information
+router.get('/:city/details', weatherController.getAdditionalWeatherInformation)
+
+// Get current weather for multiple cities
+router.get('/cities/current', weatherController.getCurrentWeatherForMultipleCities)
+
+// Get weather information with different units
+router.get('/:city/units', weatherController.getWeatherWithDifferentUnits)
+
+// Get sunrise and sunset time
+router.get('/:city/sun', weatherController.getSunriseAndSunsetTime)
+
+// Get long-term forecast
+router.get('/:city/long-term', weatherController.getLongTermForecast)
+
+// Get temperature statistics
+router.get('/:city/stats', weatherController.getTemperatureStatistics)
+
+// Get weather by zip code
+router.get('/zipcode/:zipcode', weatherController.getWeatherByZipCode)
+
+export default router

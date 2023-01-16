@@ -1,11 +1,11 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import weatherRoutes from './routes/weather.routes';
+import express from 'express'
+import dotenv from 'dotenv'
+import cors from 'cors'
+import weatherRoutes from './routes/weather.routes'
 
 /*
  * WeatherAPI - A REST API to query weather using the openweathermap.org API, developed in Node.js and TypeScript
- * Copyright (C) 2021 Sebastià Baró
+ * Copyright (C) 2023 Sebastià Baró
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,25 +19,25 @@ import weatherRoutes from './routes/weather.routes';
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
+ */
 
 // Load environment variables
-dotenv.config();
+dotenv.config()
 
 // Create Express app
-const app = express();
+const app = express()
 
 // Enable CORS
-app.use(cors());
+app.use(cors())
 
 // Parse JSON request bodies
-app.use(express.json());
+app.use(express.json())
 
 // Use weather routes
-app.use('/weather', weatherRoutes);
+app.use('/weather', weatherRoutes)
 
 // Start server
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
+    console.log(`Server listening on port ${port}`)
+})

@@ -20,3 +20,6 @@ dist/
 
 # package-lock.json
 package-lock.json
+
+# Prettier File config
+.prettierrc

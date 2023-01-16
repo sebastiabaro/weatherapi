@@ -67,17 +67,45 @@ There are no tests for this project yet.
 
 ## Usage
 
-The API has a single endpoint for querying the weather of a city. The endpoint is `/weather/:city` and it accepts the following query parameters:
+### Get weather by city name
 
-- `units`: Specifies the units for the temperature. Can be either `metric` (Celsius) or `imperial` (Fahrenheit). Default is `metric`.
-- `lang`: Specifies the language of the weather description. Can be any ISO 639-1 language code. Default is `en`.
+Make a GET request to `/weather/:city` to get the current weather for a specific city.
 
-Here are some examples of how to use the API:
+### Get forecast for multiple cities
 
-- Get the weather of London in Celsius: `GET /weather/London`
-- Get the weather of New York in Fahrenheit: `GET /weather/New+York?units=imperial`
-- Get the weather of Tokyo in Japanese: `GET /weather/Tokyo?lang=ja`
+Make a GET request to `/weather/cities?cities=city1,city2,city3` to get the forecast for multiple cities.
 
+### Get forecast based on user's location
+
+Make a GET request to `/weather/location` to get the forecast based on the user's current location.
+
+### Get additional weather information
+
+Make a GET request to `/weather/:city/details` to get additional weather information such as humidity and wind speed for a specific city.
+
+### Get current weather for multiple cities
+
+Make a GET request to `/weather/cities/current?cities=city1,city2,city3` to get the current weather for multiple cities.
+
+### Get weather information with different units
+
+Make a GET request to `/weather/:city/units?units=metric` or `/weather/:city/units?units=imperial` to get weather information for a specific city in the desired units.
+
+### Get sunrise and sunset time
+
+Make a GET request to `/weather/:city/sun` to get the time of sunrise and sunset for a specific city.
+
+### Get long-term forecast
+
+Make a GET request to `/weather/:city/long-term` to get the long-term forecast for a specific city.
+
+### Get temperature statistics
+
+Make a GET request to `/weather/:city/stats` to get statistics of temperature such as minimum, maximum and average for a specific city.
+
+### Get weather by zip code
+
+Make a GET request to `/weather/zipcode/:zipcode` to get the current weather by zip code.
 
 ## Contributing
 
