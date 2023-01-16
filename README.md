@@ -67,45 +67,71 @@ There are no tests for this project yet.
 
 ## Usage
 
+## Usage
+
 ### Get weather by city name
 
 Make a GET request to `/weather/:city` to get the current weather for a specific city.
+
+Example: `/weather/london`
 
 ### Get forecast for multiple cities
 
 Make a GET request to `/weather/cities?cities=city1,city2,city3` to get the forecast for multiple cities.
 
+Example: `/weather/cities?cities=london,paris,newyork`
+
 ### Get forecast based on user's location
 
 Make a GET request to `/weather/location` to get the forecast based on the user's current location.
+
+Example: `/weather/location`
+
+Form Params:
+- `lat`: (Required) The latitude of the user's location
+- `lon`: (Required) The longitude of the user's location
 
 ### Get additional weather information
 
 Make a GET request to `/weather/:city/details` to get additional weather information such as humidity and wind speed for a specific city.
 
+Example: `/weather/london/details`
+
 ### Get current weather for multiple cities
 
 Make a GET request to `/weather/cities/current?cities=city1,city2,city3` to get the current weather for multiple cities.
+
+Example: `/weather/cities/current?cities=london,paris,newyork`
 
 ### Get weather information with different units
 
 Make a GET request to `/weather/:city/units?units=metric` or `/weather/:city/units?units=imperial` to get weather information for a specific city in the desired units.
 
+Example: `/weather/london/units?units=metric`
+
 ### Get sunrise and sunset time
 
 Make a GET request to `/weather/:city/sun` to get the time of sunrise and sunset for a specific city.
+
+Example: `/weather/london/sun`
 
 ### Get long-term forecast
 
 Make a GET request to `/weather/:city/long-term` to get the long-term forecast for a specific city.
 
+Example: `/weather/london/long-term`
+
 ### Get temperature statistics
 
 Make a GET request to `/weather/:city/stats` to get statistics of temperature such as minimum, maximum and average for a specific city.
 
+Example: `/weather/london/stats`
+
 ### Get weather by zip code
 
 Make a GET request to `/weather/zipcode/:zipcode` to get the current weather by zip code.
+
+Example: `/weather/zipcode/90210`
 
 ## Contributing
 
