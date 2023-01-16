@@ -55,7 +55,7 @@ export default class WeatherController {
      */
     public async getForecastForMultipleCities(req: Request, res: Response) {
         // Parse list of cities from query parameter
-        const { cities } = req.query
+        const cities = (<string>req.query.cities).split(',')
         const apiKey = process.env.OPENWEATHER_API_KEY
         if (!apiKey) {
             res.status(500).json({
@@ -147,7 +147,7 @@ export default class WeatherController {
      */
     public async getCurrentWeatherForMultipleCities(req: Request, res: Response) {
         // Parse list of cities from query parameter
-        const { cities } = req.query
+        const cities = (<string>req.query.cities).split(',')
         const apiKey = process.env.OPENWEATHER_API_KEY
         if (!apiKey) {
             res.status(500).json({
@@ -230,32 +230,6 @@ export default class WeatherController {
                 sunrise: sunrise.toLocaleTimeString(),
                 sunset: sunset.toLocaleTimeString(),
             })
-        } catch (error: any) {
-            res.status(500).json({
-                message: error.message,
-            })
-        }
-    }
-
-    /**
-     * Get long-term forecast for a city.
-     * @param {Request} req - Express request object.
-     * @param {Response} res - Express response object.
-     */
-    public async getLongTermForecast(req: Request, res: Response) {
-        // Get city name from request parameters
-        const { city } = req.params
-        const apiKey = process.env.OPENWEATHER_API_KEY
-        if (!apiKey) {
-            res.status(500).json({
-                message: 'API key not found',
-            })
-            return
-        }
-        try {
-            // Make request to OpenWeather API
-            const response = await axios.get(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&appid=${apiKey}`)
-            res.json(response.data)
         } catch (error: any) {
             res.status(500).json({
                 message: error.message,

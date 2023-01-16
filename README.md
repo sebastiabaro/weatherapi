@@ -67,8 +67,6 @@ There are no tests for this project yet.
 
 ## Usage
 
-## Usage
-
 ### Get weather by city name
 
 Make a GET request to `/weather/:city` to get the current weather for a specific city.
@@ -114,12 +112,6 @@ Example: `/weather/london/units?units=metric`
 Make a GET request to `/weather/:city/sun` to get the time of sunrise and sunset for a specific city.
 
 Example: `/weather/london/sun`
-
-### Get long-term forecast
-
-Make a GET request to `/weather/:city/long-term` to get the long-term forecast for a specific city.
-
-Example: `/weather/london/long-term`
 
 ### Get temperature statistics
 

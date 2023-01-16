@@ -23,9 +23,6 @@ const weatherController = new WeatherController()
 
 const router = Router()
 
-// Get weather by city name
-router.get('/:city', weatherController.getWeather)
-
 // Get forecast for multiple cities
 router.get('/cities', weatherController.getForecastForMultipleCities)
 
@@ -44,13 +41,13 @@ router.get('/:city/units', weatherController.getWeatherWithDifferentUnits)
 // Get sunrise and sunset time
 router.get('/:city/sun', weatherController.getSunriseAndSunsetTime)
 
-// Get long-term forecast
-router.get('/:city/long-term', weatherController.getLongTermForecast)
-
 // Get temperature statistics
 router.get('/:city/stats', weatherController.getTemperatureStatistics)
 
 // Get weather by zip code
 router.get('/zipcode/:zipcode', weatherController.getWeatherByZipCode)
+
+// Get weather by city name
+router.get('/:city', weatherController.getWeather)
 
 export default router
